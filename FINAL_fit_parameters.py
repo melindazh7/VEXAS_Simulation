@@ -1,9 +1,5 @@
 """
-FILE 1 OF 2: fit_parameters.py
-
-STATUS: FITTING COMPLETE (final). Writes the settled, manually-adjudicated
-parameter set to fitted_params.json. No further optimization runs needed
-unless underlying cell data changes.
+This file incorporates the final parameters to generate the figures.
 
 KEY FINDINGS FROM THIS ANALYSIS:
   - mutant_myeloid's BAX pathway (BAXT, kasx, kfx) IS identifiable once
