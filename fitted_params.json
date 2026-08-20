@@ -1,0 +1,51 @@
+{
+  "mutant_myeloid": {
+    "trcCHOP": 1.6255004084937603,
+    "ktrATF4": 8.044048797972952,
+    "trcGADD34": 0.5238385430788823,
+    "BAXT": 97.1733,
+    "kasx": 473.6436,
+    "kfx": 0.2632,
+    "kfbc": 11.58253458345257
+  },
+  "mutant_lymphoid": {
+    "trcCHOP": 0.05,
+    "ktrATF4": 4.3352,
+    "trcGADD34": 0.01694348140860609,
+    "BAXT": 100.0,
+    "kfbc": 10.0,
+    "kmbc": 0.03
+  },
+  "wildtype_myeloid": {
+    "trcCHOP": 0.7444226154524105,
+    "ktrATF4": 50.0,
+    "trcGADD34": 0.6795891699916465,
+    "BAXT": 17.17000044080578,
+    "kfbc": 9.018766124191075
+  },
+  "wildtype_lymphoid": {
+    "trcCHOP": 0.669616834841098,
+    "ktrATF4": 2.887336508221079,
+    "trcGADD34": 1.144319801862414,
+    "BAXT": 100.0,
+    "kfbc": 5.911998146495996
+  },
+  "_ks3p_by_lineage": {
+    "myeloid": {
+      "status": "STRUCTURALLY NON-IDENTIFIABLE",
+      "note": "ks3p only appears as ks3p*kstr in rea9 -- only the product is observable from BH3 expression data, not ks3p alone."
+    },
+    "lymphoid": {
+      "status": "STRUCTURALLY NON-IDENTIFIABLE",
+      "note": "same as myeloid"
+    },
+    "recommendation": "Use KS3P_MYELOID=0.3 / KS3P_LYMPHOID=1.2 (literature/model reference values) for Figure 5. Do not use ks3p as the Figure 3 axis."
+  },
+  "_confidence_notes": {
+    "mutant_myeloid": "HIGH confidence across the board, including BAX pathway (resolved via joint subsystem co-fitting after single-parameter fitting proved invalid).",
+    "mutant_lymphoid": "trcCHOP is a confirmed non-identifiable bound. BCL2 pathway (kfbc/kmbc) confirmed structurally/practically non-identifiable via genuine compensation ridge -- SBML defaults used and flagged explicitly.",
+    "wildtype_myeloid": "HIGH confidence except ktrATF4 (one-sided bound, likely >> 50).",
+    "wildtype_lymphoid": "LOW confidence for trcCHOP/ktrATF4/trcGADD34. BAXT reverted to default after single-param fit broke model validity -- joint subsystem fit not yet attempted for this group.",
+    "ks3p_by_lineage": "Structurally non-identifiable from BH3 gene data given the model's ks3p*kstr coupling in rea9. Using literature reference values instead."
+  }
+}
